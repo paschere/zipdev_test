@@ -26,6 +26,7 @@ from model.job_descriptions import (
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+init_candidate_data()
 
 
 @app.route("/", methods=["GET"])
@@ -61,7 +62,3 @@ def process_candidates() -> Any:
 
     top_candidates = compute_similarity(df_filtered, job_desc)
     return jsonify({"job_description": job_desc, "candidates": top_candidates})
-
-
-if __name__ == "__main__":
-    init_candidate_data()
