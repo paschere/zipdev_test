@@ -15,9 +15,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install NLTK data dependencies
-RUN python -m nltk.downloader stopwords punkt
-
 # Copy the requirements file into the container
 COPY requirements.txt .
 
