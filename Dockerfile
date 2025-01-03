@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 
-RUN python ./model/train_model.py
+RUN python -m model.train_model
 
 # Run the web service on container startup.
 CMD ["gunicorn", "main:app"]

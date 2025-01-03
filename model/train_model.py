@@ -145,6 +145,7 @@ def build_pipeline() -> Pipeline:
 def main():
     nltk.download("stopwords")
     nltk.download("punkt")
+    nltk.download("punkt_tab")
 
     current_dir = os.path.dirname(__file__)
     csv_path = os.path.join(current_dir, "../data/candidates.csv")
