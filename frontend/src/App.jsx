@@ -102,13 +102,13 @@ function App() {
                         {cand.Name || "Unnamed Candidate"}
                       </h3>
                       <p className="text-sm text-gray-500">
-                        Score: {cand.score?.toFixed(2)}
+                        Score: {cand.similarity_score?.toFixed(2)}
                       </p>
 
                       <div className="bg-gray-200 w-32 h-4 rounded-full">
                         <div
                           className="bg-indigo-500 h-4 rounded-full"
-                          style={{ width: `${cand.score}%` }}
+                          style={{ width: `${cand.similarity_score}%` }}
                         ></div>
                       </div>
                     </div>
