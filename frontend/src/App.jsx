@@ -44,6 +44,9 @@ function App() {
         <h1 className="text-2xl font-bold text-center">
           ZipDev Candidate Matching
         </h1>
+        <h2 className="text-sm text-center">
+          Mateo Angel
+        </h2>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-6">
