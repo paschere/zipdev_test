@@ -1,0 +1,36 @@
+<!-- file: webapp/templates/results.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Top 30 Candidates</title>
+</head>
+
+<body>
+    <h1>Top 30 Candidates (Hybrid Approach)</h1>
+    <p>Job Description Provided: <b>{{ job_description }}</b></p>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% else %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Score (0-100)</th>
+            <th>Disqualified Pred?</th>
+            <th>Candidate Resume Text (excerpt)</th>
+        </tr>
+        {% for cand in candidates %}
+        <tr>
+            <td>{{ cand.Name }}</td>
+            <td>{{ cand.score|round(2) }}</td>
+            <td>{{ cand.disqualified_pred }}</td>
+            <td>{{ cand.resume_text|truncate(100) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br>
+    <a href="/">Back</a>
+</body>
+
+</html>
