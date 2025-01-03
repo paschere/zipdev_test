@@ -98,6 +98,10 @@ Below is a sample layout of this repository:
         python -m nltk.downloader punkt
         ```
 
+5.  **Launch the app**:
+    `    gunicorn --reload --bind 0.0.0.0:8000 webapp.app:app
+   `
+
 ---
 
 ## Usage
@@ -107,6 +111,7 @@ Below is a sample layout of this repository:
 Run the `train_model.py` script to build and save the pipeline model (`pipeline.pkl`):
 
 ```
+
 python -m model.train_model
 
 ```

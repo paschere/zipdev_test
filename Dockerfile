@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Run in unbuffered mode
 ENV PYTHONUNBUFFERED=1 
+ENV PYTHONPATH=/app
 
 # Copy local code to the container image.
 COPY . ./
@@ -16,6 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code into the container
 COPY . .
 
+# run ls
+RUN ls
 
 RUN python -m model.train_model
 
