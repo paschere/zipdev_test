@@ -65,4 +65,3 @@ def process_candidates() -> Any:
 
 if __name__ == "__main__":
     init_candidate_data()
-    app.run(debug=True)
